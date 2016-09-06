@@ -7,6 +7,9 @@ description: "Loaded BBQ Chicken Nachos FULL RECIPE: http://bzfd.it/21vTnlW",
 id: "1727880490797926"
 },
  */
+
+console.log("hello! Beginning");
+
 'use strict';
 import React, {
   AppRegistry,
@@ -19,8 +22,10 @@ import React, {
   View
 } from 'react-native';
 
+// var tabBar = require('./tabBar.js')
+
 var pageid = 'buzzfeedtasty';
-var REQUEST_URL = 'https://graph.facebook.com/v2.5/'+pageid+'?fields=videos.limit(1000){picture,embed_html,created_time,description}&access_token=CAACEdEose0cBAL0ohB0TAIaclZBxd8YXA1Xpq57WZCgFgRjT9P4WZAJDjpkHrcsb8tLO2uKEo9vwvpnbFfWHHbDTd8OWjjUWBkYJqepbh7taoP9RfQdZALTpcZBnm22djUZCdYkZAoIOTz6HE1MudYJjSkoueckl69NQdMS2i3nKN5CdebBMsRV34ypUPMUgKJ0OykL5v8cAqnGT4Cg14B3'
+var REQUEST_URL = 'https://graph.facebook.com/v2.5/'+ pageid +'?fields=videos.limit(1000){picture,embed_html,created_time,description}&access_token=637343989764348|UIcj47P3UIq9EpbfOsHzd81Qln0'
 
 var sanitizeTastyDescription=function(description){
  if(description.search("FULL")!=-1)
@@ -113,6 +118,9 @@ class AwesomeProject extends Component {
      }
 } //end class
 
+
+
+
 var styles = StyleSheet.create({
   listView: {
       paddingTop: 20,
@@ -141,5 +149,7 @@ var styles = StyleSheet.create({
     textAlign: 'left'
   }
 });
+
+console.log("hello!");
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
